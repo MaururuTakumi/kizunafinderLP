@@ -19,8 +19,12 @@ export const FinalCta = () => {
             実際のキャンペーン情報をもとに、最初の候補選定からアウトリーチ準備までを体験いただけます。
           </p>
         </div>
-        <Link href="/#contact" className="btn-primary bg-white text-ink" onClick={handleClick}>
-          1週間無料で試す
+        <Link
+          href="/#contact"
+          className="btn-primary bg-white text-ink"
+          onClick={handleClick}
+        >
+          1週間無料トライアルを始める
         </Link>
       </div>
     </section>

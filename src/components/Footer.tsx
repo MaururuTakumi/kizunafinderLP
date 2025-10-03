@@ -24,7 +24,7 @@ export const Footer = () => {
               ブランドの意図を理解し、最適な候補とWhy?を提示します。
             </p>
             <p className="text-sm text-white/50">
-              お問い合わせ: <a href="mailto:hello@kizunafinder.com">hello@kizunafinder.com</a>
+              お問い合わせ: <a href="mailto:quickclip@ltdhonkoma.com">quickclip@ltdhonkoma.com</a>
             </p>
           </div>
           <div className="flex gap-10 text-sm">

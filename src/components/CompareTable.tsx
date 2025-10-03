@@ -53,8 +53,7 @@ const FLOW_COPY = {
 const CLOSING = {
   heading: "売れる未来に、最短で届く。",
   sub: "見つける・声をかける・届けるをAIが自動化。社内で自走する仕組みで、欲しい顧客に確実に近づく。",
-  ctaPrimary: { label: "無料で試してみる", href: "#contact" },
-  ctaSecondary: { label: "デモを見る", href: "#steps" },
+  ctaPrimary: { label: "1週間無料トライアルを始める", href: "#contact" },
 };
 
 export function CompareTable() {
@@ -69,9 +68,9 @@ export function CompareTable() {
     }
   }, []);
 
-  const handleCTAClick = useCallback((type: "primary" | "secondary") => {
+  const handleCTAClick = useCallback(() => {
     try {
-      pushEvent({ event: `compare:cta_${type}_click` });
+      pushEvent({ event: "compare:cta_primary_click" });
     } catch (e) {
       // pushEvent might not exist
     }
@@ -242,17 +241,10 @@ export function CompareTable() {
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <a
               href={CLOSING.ctaPrimary.href}
-              onClick={() => handleCTAClick("primary")}
+              onClick={handleCTAClick}
               className="btn-primary"
             >
               {CLOSING.ctaPrimary.label}
-            </a>
-            <a
-              href={CLOSING.ctaSecondary.href}
-              onClick={() => handleCTAClick("secondary")}
-              className="btn-secondary"
-            >
-              {CLOSING.ctaSecondary.label}
             </a>
           </div>
         </div>

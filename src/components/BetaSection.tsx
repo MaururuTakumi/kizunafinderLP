@@ -35,10 +35,10 @@ export const BetaSection = () => {
       </div>
       <div className="flex flex-wrap items-center gap-3 pt-6">
         <Link href="/#contact" className="btn-primary bg-white text-brand hover:opacity-100">
-          1週間無料で試す
+          1週間無料トライアルを始める
         </Link>
         <span className="text-xs text-brand-100">
-          招待制｜定員に達し次第クローズします
+          クレカ不要・β定員に達し次第クローズします
         </span>
       </div>
     </section>

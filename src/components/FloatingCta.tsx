@@ -15,7 +15,7 @@ export const FloatingCta = () => {
         className="btn-primary w-full shadow-lg"
         onClick={handleClick}
       >
-        1週間無料で試す
+        1週間無料トライアルを始める
       </Link>
     </div>
   );
