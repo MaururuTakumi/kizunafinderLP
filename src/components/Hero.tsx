@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { pushEvent } from "@/lib/analytics";
 
@@ -23,11 +22,18 @@ export const Hero = () => {
           <span className="badge inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-brand border border-brand/20 bg-gradient-to-r from-blue-50 to-violet-50">
             β版先行公開 <span className="text-gray-400">|</span> 1週間無料トライアル <span className="text-gray-400">|</span> クレカ不要
           </span>
-          <h1 className="max-w-[24ch] text-center font-extrabold leading-[1.1] tracking-tight text-[clamp(34px,6.5vw,66px)] text-ink">
-            広告費をムダにせず、<span className="relative inline-block text-emerald-600">
-              成果の出るインフルエンサー
+          <h1 className="text-center font-extrabold leading-[1.15] tracking-tight text-[clamp(34px,6.5vw,66px)] text-ink max-w-[28ch]">
+            広告費をムダにせず、
+            <br className="hidden sm:block" />
+            <span className="relative inline-block text-emerald-600">
+              成果の出る
+              <br className="sm:hidden" />
+              インフルエンサー
               <span className="absolute -bottom-1 left-0 w-full h-1 bg-emerald-400/40" aria-hidden />
-            </span>を<span className="font-black text-brand">即特定</span>。
+            </span>
+            を
+            <br className="sm:hidden" />
+            <span className="font-black text-brand">即特定</span>
           </h1>
           <p className="max-w-[54ch] text-[clamp(15px,2.1vw,19px)] leading-relaxed text-ink/80">
             伸びている投稿を自動で読み解き、商材とのフィットやWhy?を添えて候補を提示。ディレクション共有からアウトリーチ下書きまで、広告チームの判断とスピードを落としません。
@@ -117,29 +123,6 @@ export const Hero = () => {
                 playsInline
                 className="w-full overflow-hidden rounded-3xl bg-white shadow-[0_18px_40px_rgba(15,23,42,0.12)]"
               />
-            </div>
-            <div className="order-1 flex h-full flex-col justify-between rounded-3xl border border-ink/10 bg-white p-6 text-left shadow-[0_12px_24px_rgba(15,23,42,0.06)] lg:order-2">
-              <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                  <Image
-                    src="/images/gallery-3.png"
-                    alt="β参加企業マーケターの写真"
-                    fill
-                    className="object-cover"
-                    sizes="48px"
-                  />
-                </div>
-                <div className="text-sm text-ink/80">
-                  <p className="font-semibold text-ink">D2Cブランド マーケティング責任者</p>
-                  <p>βユーザー</p>
-                </div>
-              </div>
-              <p className="mt-4 text-sm leading-relaxed text-ink/80">
-                「レポート作成に費やしていた2日分の工数がなくなり、広告チームが毎週の施策会議で“次の一手”を即決できるようになりました。」
-              </p>
-              <span className="mt-5 text-xs font-medium uppercase tracking-[0.3em] text-brand/70">
-                体験談
-              </span>
             </div>
           </div>
         </div>

@@ -54,9 +54,8 @@ export default function Home() {
         <NowNext />
         <Templates />
         <BetaSection />
-        <LeadCapture />
-        <Faq />
         <ContactForm />
+        <Faq />
       </main>
       <Footer />
       <FloatingCta />
