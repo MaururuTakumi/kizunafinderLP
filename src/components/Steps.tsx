@@ -130,7 +130,7 @@ export const Steps = () => {
             onPointerDown={handleUserInteraction}
             onClick={handleUserInteraction}
           >
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <article
                 key={step.title}
                 className="flex h-full min-h-[180px] flex-shrink-0 basis-[70%] flex-col gap-6 rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-[0_1px_2px_rgba(16,24,40,0.06)] snap-center transition hover:-translate-y-[1px] hover:shadow-md hover:ring-slate-300 md:basis-[68%] lg:basis-[70%]"

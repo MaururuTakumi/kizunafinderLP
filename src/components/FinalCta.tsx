@@ -18,7 +18,7 @@ export const FinalCta = () => {
         {/* Z視線: テキスト左→CTA右 */}
         <div className="space-y-4 flex-1">
           <h2 className="text-3xl font-bold leading-tight">
-            いまの案件で<span className="text-emerald-300">"試し切り"</span>しませんか？
+            いまの案件で<span className="text-emerald-300">&ldquo;試し切り&rdquo;</span>しませんか？
           </h2>
           <p className="text-base text-white/90">
             実際のキャンペーン情報をもとに、最初の候補選定からアウトリーチ準備までを体験いただけます。

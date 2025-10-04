@@ -63,7 +63,7 @@ export function CompareTable() {
     setMode(newMode);
     try {
       pushEvent({ event: "compare:toggle", payload: { value: newMode } });
-    } catch (e) {
+    } catch {
       // pushEvent might not exist
     }
   }, []);
@@ -71,7 +71,7 @@ export function CompareTable() {
   const handleCTAClick = useCallback(() => {
     try {
       pushEvent({ event: "compare:cta_primary_click" });
-    } catch (e) {
+    } catch {
       // pushEvent might not exist
     }
   }, []);
@@ -103,7 +103,6 @@ export function CompareTable() {
               role="tab"
               aria-selected={mode === "before"}
               aria-controls="compare-content"
-              aria-pressed={mode === "before"}
               onClick={() => handleToggle("before")}
               onKeyDown={(e) => {
                 if (e.key === "ArrowLeft" && mode === "after") handleToggle("before");
@@ -121,7 +120,6 @@ export function CompareTable() {
               role="tab"
               aria-selected={mode === "after"}
               aria-controls="compare-content"
-              aria-pressed={mode === "after"}
               onClick={() => handleToggle("after")}
               onKeyDown={(e) => {
                 if (e.key === "ArrowLeft" && mode === "after") handleToggle("before");
