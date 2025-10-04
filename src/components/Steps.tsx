@@ -5,20 +5,20 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     label: "STEP 01",
-    title: "自然言語で入力",
-    description: "「Z世代に刺さるコスメ系インフルエンサー」などの自然文でOK。",
+    title: "課題とターゲットを自然文で投げる",
+    description: "「広告費を抑えながらリピート率を上げたい」「Z世代向けに動画で訴求したい」など、現状の悩みをそのまま入力するだけ。",
     video: "step-01-brief.mp4",
   },
   {
     label: "STEP 02",
-    title: "候補リストとWhy?を瞬時に取得",
-    description: "伸びている投稿を分析し、マッチ理由とともに候補を提示します。",
+    title: "成果につながる候補とWhy?を即受け取る",
+    description: "伸びている投稿の勝ち要素を解析し、CVR改善につながる打ち手と共に候補を提示。社内共有スライドにも貼れる要約を自動生成します。",
     video: "step-02-results.mp4",
   },
   {
     label: "STEP 03",
-    title: "共有とアウトリーチまで一気通貫",
-    description: "連絡先抽出とメール下書き生成で、社内共有からアプローチまでスムーズに。",
+    title: "下書きとタスクまで自動化し実行に移す",
+    description: "連絡先取得、メール・DMの下書き、タスク共有までワンフロー。営業チームや代理店への引き継ぎもリンク一つで完了します。",
     video: "step-03-outreach.mp4",
   },
 ];
@@ -93,16 +93,31 @@ export const Steps = () => {
   };
 
   return (
-    <section id="steps" className="bg-slate-50 py-20">
+    <section id="steps" className="relative bg-slate-50 py-20">
+      {/* 装飾的な境界 */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden">
+        <svg viewBox="0 0 1200 120" className="w-full h-16 text-white">
+          <path d="M0,0 Q300,60 600,30 T1200,0 L1200,120 L0,120 Z" fill="currentColor" />
+        </svg>
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="mb-12 flex flex-col items-center gap-3 text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
+        <div className="mb-16 flex flex-col items-center gap-4 text-center">
+          <span className="text-xs font-medium uppercase tracking-[0.2em] text-violet-600">
             HOW IT WORKS
           </span>
-          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">3ステップで配信準備まで</h2>
-          <p className="text-slate-600">
-            自然文での入力から、候補提示・根拠説明・アウトリーチ準備までをワンフローで。
+          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+            <span className="text-brand">CVR改善</span>までを<span className="font-black">3ステップ</span>で完結
+          </h2>
+          <p className="max-w-[60ch] text-slate-600">
+            広告から流入した瞬間に「このツールで次の施策が回せる」と確信してもらうために、<span className="font-semibold text-brand">課題整理→勝ち筋共有→実行のタスク化</span>までを一本化しました。
           </p>
+          {/* 視線誘導：下へのフロー */}
+          <div className="mt-2 flex flex-col items-center gap-1">
+            <svg className="w-6 h-6 text-brand/40 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
         </div>
         <div className="mx-auto w-full max-w-[1200px]">
           <div

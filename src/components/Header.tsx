@@ -32,9 +32,9 @@ export const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-200 bg-white ${
+      className={`sticky top-0 z-50 transition-all duration-200 bg-white/95 backdrop-blur-sm ${
         isScrolled
-          ? "shadow-md"
+          ? "shadow-lg border-b border-emerald-100/50"
           : "border-b border-gray-100"
       }`}
     >
@@ -56,20 +56,13 @@ export const Header = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/#contact"
-            className="hidden btn-secondary text-nav-cta lg:inline-flex"
-            onClick={handleCta("header")}
-          >
-            デモを見る
-          </Link>
+        <div className="flex items-center">
           <Link
             href="/#contact"
             className="btn-primary text-nav-cta"
             onClick={handleCta("header")}
           >
-            1週間無料で試す
+            1週間無料トライアルを始める
           </Link>
         </div>
       </div>
