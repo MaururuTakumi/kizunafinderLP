@@ -55,7 +55,7 @@ export const Strengths = () => {
             <span className="text-brand">CVR改善</span>につながる3つの体験価値
           </h2>
           <p className="max-w-[56ch] text-sm text-slate-600">
-            広告から流入した直後のユーザーが"これなら成果が出る"と確信できる情報を先回りで提示し、無料トライアルへのハードルを下げます。
+            広告から流入した直後のユーザーが&ldquo;これなら成果が出る&rdquo;と確信できる情報を先回りで提示し、無料トライアルへのハードルを下げます。
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">

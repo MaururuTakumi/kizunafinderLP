@@ -5,7 +5,6 @@ import { Faq } from "@/components/Faq";
 import { FloatingCta } from "@/components/FloatingCta";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { LeadCapture } from "@/components/LeadCapture";
 import { NowNext } from "@/components/NowNext";
 import { Steps } from "@/components/Steps";
 import { Strengths } from "@/components/Strengths";
