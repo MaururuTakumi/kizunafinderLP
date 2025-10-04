@@ -77,12 +77,17 @@ export function CompareTable() {
   }, []);
 
   return (
-    <section id="compare" className="bg-slate-50 py-20">
-      <div className="section-container">
+    <section id="compare" className="relative bg-slate-50 py-20">
+      {/* 装飾的境界 */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-emerald-50/30 to-transparent" aria-hidden />
+
+      <div className="section-container relative z-10">
         {/* Header */}
         <div className="mb-12 flex flex-col items-center gap-6 text-center">
           <div className="flex flex-col gap-3">
-            <h2 className="text-3xl font-bold text-ink md:text-4xl">{COPY.title}</h2>
+            <h2 className="text-3xl font-bold text-ink md:text-4xl">
+              導入で、<span className="text-brand">現場がこう変わる</span>。
+            </h2>
             <p className="mx-auto max-w-3xl text-base text-ink/70 md:text-lg">
               {COPY.subtitle}
             </p>
@@ -142,7 +147,7 @@ export function CompareTable() {
           {COPY.cards.map((card, i) => (
             <article
               key={i}
-              className="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-md"
+              className={`flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg ${i === 1 ? 'md:scale-[1.02]' : ''}`}
             >
               <h3 className="text-lg font-semibold text-ink">{card.title}</h3>
               <div className="relative min-h-[80px]">
@@ -232,10 +237,10 @@ export function CompareTable() {
         <div className="flex flex-col items-center gap-6 rounded-2xl bg-gradient-to-br from-brand/5 to-brand/10 p-8 text-center md:p-10">
           <div className="pt-4">
             <h3 className="text-3xl md:text-4xl font-semibold tracking-tight leading-tight text-center">
-              売れる未来に、<br className="block md:hidden" />最短で届く。
+              <span className="text-emerald-600">売れる未来</span>に、<br className="block md:hidden" /><span className="font-black">最短で</span>届く。
             </h3>
             <p className="mt-3 text-base md:text-lg text-slate-600 max-w-3xl mx-auto text-center">
-              見つける・声をかける・届けるをAIが自動化。<br className="hidden md:block" />社内で<span className="font-semibold text-blue-700">自走する仕組み</span>で、<span className="font-semibold text-blue-700">欲しい顧客</span>に確実に近づく。
+              見つける・声をかける・届けるをAIが自動化。<br className="hidden md:block" />社内で<span className="font-semibold text-violet-600">自走する仕組み</span>で、<span className="font-semibold text-blue-700">欲しい顧客</span>に確実に近づく。
             </p>
           </div>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:gap-4">

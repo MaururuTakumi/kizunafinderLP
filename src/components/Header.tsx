@@ -32,9 +32,9 @@ export const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-200 bg-white ${
+      className={`sticky top-0 z-50 transition-all duration-200 bg-white/95 backdrop-blur-sm ${
         isScrolled
-          ? "shadow-md"
+          ? "shadow-lg border-b border-emerald-100/50"
           : "border-b border-gray-100"
       }`}
     >

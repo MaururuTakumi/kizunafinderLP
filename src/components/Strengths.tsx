@@ -22,27 +22,49 @@ const items = [
 ];
 
 export const Strengths = () => {
+  const cardColors = [
+    "bg-emerald-50 ring-emerald-200",
+    "bg-violet-50 ring-violet-200",
+    "bg-amber-50 ring-amber-200"
+  ];
+
+  const iconColors = [
+    "bg-emerald-100 ring-emerald-200",
+    "bg-violet-100 ring-violet-200",
+    "bg-amber-100 ring-amber-200"
+  ];
+
   return (
-    <section id="strengths" className="bg-white py-20">
-      <div className="mx-auto max-w-7xl px-6 md:px-8">
+    <section id="strengths" className="relative bg-white py-20 overflow-hidden">
+      {/* 斜めカット境界 */}
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-br from-slate-50 to-transparent transform -skew-y-1" aria-hidden />
+
+      {/* 浮遊装飾図形 */}
+      <div className="absolute top-20 right-10 w-32 h-32 border-4 border-violet-200/40 rounded-full rotate-12" aria-hidden />
+      <div className="absolute bottom-20 left-10 w-24 h-24 border-4 border-emerald-200/40 rotate-45" aria-hidden />
+      <svg className="absolute top-40 left-1/4 w-16 h-16 text-amber-200/40" viewBox="0 0 100 100">
+        <polygon points="50,10 90,90 10,90" fill="currentColor" />
+      </svg>
+
+      <div className="mx-auto max-w-7xl px-6 md:px-8 relative">
         <div className="mb-12 flex flex-col items-center gap-3 text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
+          <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
             WHY KIZUNAFINDER
           </span>
           <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
-            CVR改善につながる3つの体験価値
+            <span className="text-brand">CVR改善</span>につながる3つの体験価値
           </h2>
           <p className="max-w-[56ch] text-sm text-slate-600">
-            広告から流入した直後のユーザーが“これなら成果が出る”と確信できる情報を先回りで提示し、無料トライアルへのハードルを下げます。
+            広告から流入した直後のユーザーが"これなら成果が出る"と確信できる情報を先回りで提示し、無料トライアルへのハードルを下げます。
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
-          {items.map((item) => (
+          {items.map((item, idx) => (
             <div
               key={item.title}
-              className="group flex min-h-[180px] flex-col gap-4 rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-[0_1px_2px_rgba(16,24,40,0.06)] transition hover:-translate-y-[1px] hover:shadow-md hover:ring-slate-300 focus-within:-translate-y-[1px] focus-within:shadow-md focus-within:ring-slate-300"
+              className={`group flex min-h-[180px] flex-col gap-4 rounded-2xl p-6 ring-1 shadow-[0_1px_2px_rgba(16,24,40,0.06)] transition hover:-translate-y-[1px] hover:shadow-md focus-within:-translate-y-[1px] focus-within:shadow-md ${cardColors[idx]} ${idx === 1 ? 'lg:scale-105 lg:shadow-lg' : ''}`}
             >
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 ring-1 ring-blue-100">
+              <div className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full ring-1 ${iconColors[idx]}`}>
                 <Image
                   src={`/images/${item.icon}`}
                   alt=""

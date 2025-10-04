@@ -14,14 +14,18 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink text-white">
-      <div className="mx-auto flex w-full max-w-content flex-col gap-10 px-5 py-14">
+    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+      {/* 装飾要素 */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl" aria-hidden />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl" aria-hidden />
+
+      <div className="mx-auto flex w-full max-w-content flex-col gap-10 px-5 py-14 relative z-10">
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div className="space-y-3">
-            <p className="text-lg font-semibold">KizunaFinder</p>
+            <p className="text-lg font-semibold"><span className="text-emerald-400">Kizuna</span>Finder</p>
             <p className="text-sm text-white/70">
               AIによるインフルエンサーキャスティングプラットフォーム。
-              ブランドの意図を理解し、最適な候補とWhy?を提示します。
+              ブランドの意図を理解し、最適な候補と<span className="text-violet-300">Why?</span>を提示します。
             </p>
             <p className="text-sm text-white/50">
               お問い合わせ: <a href="mailto:quickclip@ltdhonkoma.com">quickclip@ltdhonkoma.com</a>

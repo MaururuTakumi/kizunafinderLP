@@ -93,16 +93,31 @@ export const Steps = () => {
   };
 
   return (
-    <section id="steps" className="bg-slate-50 py-20">
+    <section id="steps" className="relative bg-slate-50 py-20">
+      {/* 装飾的な境界 */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden">
+        <svg viewBox="0 0 1200 120" className="w-full h-16 text-white">
+          <path d="M0,0 Q300,60 600,30 T1200,0 L1200,120 L0,120 Z" fill="currentColor" />
+        </svg>
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="mb-12 flex flex-col items-center gap-3 text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
+        <div className="mb-16 flex flex-col items-center gap-4 text-center">
+          <span className="text-xs font-medium uppercase tracking-[0.2em] text-violet-600">
             HOW IT WORKS
           </span>
-          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">CVR改善までを3ステップで完結</h2>
+          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+            <span className="text-brand">CVR改善</span>までを<span className="font-black">3ステップ</span>で完結
+          </h2>
           <p className="max-w-[60ch] text-slate-600">
-            広告から流入した瞬間に「このツールで次の施策が回せる」と確信してもらうために、課題整理→勝ち筋共有→実行のタスク化までを一本化しました。
+            広告から流入した瞬間に「このツールで次の施策が回せる」と確信してもらうために、<span className="font-semibold text-brand">課題整理→勝ち筋共有→実行のタスク化</span>までを一本化しました。
           </p>
+          {/* 視線誘導：下へのフロー */}
+          <div className="mt-2 flex flex-col items-center gap-1">
+            <svg className="w-6 h-6 text-brand/40 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
         </div>
         <div className="mx-auto w-full max-w-[1200px]">
           <div

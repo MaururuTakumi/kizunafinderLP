@@ -99,34 +99,35 @@ export const LeadCapture = () => {
             QUICK ACCESS
           </span>
           <h2 className="text-3xl font-bold text-ink leading-tight">
-            まずはメールで資料・導入ステップを受け取る
+            まずは<span className="text-brand">メールで資料・導入ステップ</span>を受け取る
           </h2>
           <p className="text-sm text-ink/70">
-            「とりあえず情報だけ欲しい」という方のために、超短いフォームをご用意しました。広告施策に活用できる導入チェックリストも合わせてお送りします。
+            「とりあえず情報だけ欲しい」という方のために、超短いフォームをご用意。広告施策に活用できる<span className="font-semibold text-brand">導入チェックリスト</span>も合わせてお送りします。
           </p>
         </div>
-        <form className="flex flex-1 flex-col gap-4" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="lead-email" className="block text-xs font-semibold uppercase tracking-[0.25em] text-ink/50">
+        <form className="flex flex-1 flex-col gap-5" onSubmit={handleSubmit}>
+          {/* F視線: 上から下へ、フォーム→CTA */}
+          <div className="relative">
+            <label htmlFor="lead-email" className="block text-xs font-semibold uppercase tracking-[0.25em] text-brand">
               Work Email
             </label>
             <input
               id="lead-email"
               type="email"
-              className="input mt-2"
+              className="input mt-2 transition-all duration-200 focus:ring-2 focus:ring-brand focus:border-brand peer"
               placeholder="you@example.com"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
             />
           </div>
-          <div>
-            <label htmlFor="lead-goal" className="block text-xs font-semibold uppercase tracking-[0.25em] text-ink/50">
+          <div className="relative">
+            <label htmlFor="lead-goal" className="block text-xs font-semibold uppercase tracking-[0.25em] text-brand">
               What You Need
             </label>
             <select
               id="lead-goal"
-              className="input mt-2"
+              className="input mt-2 transition-all duration-200 focus:ring-2 focus:ring-brand focus:border-brand"
               value={goal}
               onChange={(event) => setGoal(event.target.value)}
             >
@@ -137,15 +138,21 @@ export const LeadCapture = () => {
               ))}
             </select>
           </div>
-          {error && <p className="text-xs text-brand">{error}</p>}
-          <div className="flex flex-col gap-2">
-            <button
-              type="submit"
-              className="btn-primary"
-              disabled={status === "loading"}
-            >
-              {status === "loading" ? "送信中..." : "資料を受け取る"}
-            </button>
+          {error && <p className="text-xs text-rose-600">{error}</p>}
+
+          {/* 視線誘導：CTA強調 */}
+          <div className="flex flex-col gap-2 mt-2">
+            <div className="relative group">
+              <button
+                type="submit"
+                className="btn-primary w-full text-base font-bold shadow-lg shadow-brand/30 hover:shadow-xl hover:shadow-brand/50 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={status === "loading"}
+              >
+                {status === "loading" ? "送信中..." : "資料を受け取る"}
+              </button>
+              {/* CTAへの視線誘導 */}
+              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand/10 to-emerald-400/10 blur-xl group-hover:blur-2xl transition-all" aria-hidden />
+            </div>
             <p className="text-[11px] text-ink/50">
               送信いただいたメールアドレス宛にβ先行案内とチェックリストのダウンロードリンクをお送りします。
             </p>
