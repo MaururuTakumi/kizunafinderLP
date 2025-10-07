@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const policyLinks = [
   { label: "プライバシーポリシー", href: "/privacy" },
+  { label: "利用規約", href: "/terms" },
 ];
 
 const resourceLinks = [
