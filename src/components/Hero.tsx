@@ -20,7 +20,7 @@ export const Hero = () => {
       <div className="hero-container mx-auto flex max-w-[1120px] flex-col items-center gap-12 px-5 pt-16 sm:pt-20 relative z-10">
         <div className="flex flex-col items-center gap-4 text-center">
           <span className="badge inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-brand border border-brand/20 bg-gradient-to-r from-blue-50 to-violet-50">
-            β版先行公開 <span className="text-gray-400">|</span> 1週間無料トライアル <span className="text-gray-400">|</span> クレカ不要
+            β版先行公開 <span className="text-gray-400">|</span> 1ヶ月無料トライアル <span className="text-gray-400">|</span> クレカ不要
           </span>
           <h1 className="text-center font-extrabold leading-[1.15] tracking-tight text-[clamp(34px,6.5vw,66px)] text-ink max-w-[28ch]">
             広告費をムダにせず、
@@ -38,7 +38,20 @@ export const Hero = () => {
           <p className="max-w-[54ch] text-[clamp(15px,2.1vw,19px)] leading-relaxed text-ink/80">
             伸びている投稿を自動で読み解き、商材とのフィットやWhy?を添えて候補を提示。ディレクション共有からアウトリーチ下書きまで、広告チームの判断とスピードを落としません。
           </p>
-
+       <div className="flex w-full flex-col gap-6">
+          <div className="grid w-full gap-6 lg:grid-cols-[minmax(0,1fr),320px]">
+            <div className="order-2 w-full lg:order-1">
+              <video
+                src="/videos/hero-demo.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full overflow-hidden rounded-3xl bg-white shadow-[0_18px_40px_rgba(15,23,42,0.12)]"
+              />
+            </div>
+          </div>
+        </div>
           <div className="mt-10 flex flex-col items-center gap-6">
             {/* Z視線: 左上→右上→左下→右下の流れ */}
 
@@ -55,9 +68,9 @@ export const Hero = () => {
                   href="/#contact"
                   className="btn-primary !px-10 !py-4 text-base font-bold relative z-10 shadow-xl shadow-brand/30 hover:shadow-2xl hover:shadow-brand/50 transition-all hover:scale-105"
                   onClick={handleCta("hero")}
-                  aria-label="1週間無料トライアルを始める"
+                  aria-label="1ヶ月無料トライアルを始める"
                 >
-                  1週間無料トライアルを始める
+                  1ヶ月無料トライアルを始める
                 </Link>
                 {/* 限定性バッジ - より目立つ位置 */}
                 <div className="absolute -top-4 -right-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg rotate-12 z-20 animate-pulse">
@@ -85,47 +98,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="flex w-full flex-col gap-6">
-          <div className="flex flex-col items-center gap-4 rounded-3xl border border-ink/10 bg-slate-50 px-6 py-5 text-center sm:flex-row sm:justify-between sm:text-left">
-            <div className="flex flex-1 flex-col gap-1 text-sm text-ink/70">
-              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand/70">
-                Trusted teams
-              </span>
-              <p className="text-base font-semibold text-ink">
-                D2C・アプリ・エンタメのマーケターがβ版で検証中
-              </p>
-            </div>
-            <div className="flex flex-1 flex-wrap justify-center gap-4 text-xs font-semibold text-ink/60 sm:justify-end">
-              {[
-                "D2Cブランド",
-                "モバイルアプリ",
-                "ライブ配信サービス",
-                "デジタル広告代理店",
-              ].map((brand) => (
-                <span
-                  key={brand}
-                  className="flex items-center gap-2 rounded-full border border-ink/10 bg-white px-3 py-1"
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-brand/60" aria-hidden />
-                  {brand}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid w-full gap-6 lg:grid-cols-[minmax(0,1fr),320px]">
-            <div className="order-2 w-full lg:order-1">
-              <video
-                src="/videos/hero-demo.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full overflow-hidden rounded-3xl bg-white shadow-[0_18px_40px_rgba(15,23,42,0.12)]"
-              />
-            </div>
-          </div>
-        </div>
+ 
       </div>
     </section>
   );

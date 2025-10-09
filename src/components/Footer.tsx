@@ -3,6 +3,7 @@ import Link from "next/link";
 const policyLinks = [
   { label: "プライバシーポリシー", href: "/privacy" },
   { label: "利用規約", href: "/terms" },
+  { label: "運営会社", href: "https://ltdhonkoma.com/" },
 ];
 
 const resourceLinks = [

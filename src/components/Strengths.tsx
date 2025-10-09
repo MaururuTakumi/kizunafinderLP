@@ -8,7 +8,7 @@ const items = [
     icon: "ic-fit.svg",
   },
   {
-    title: "判断待ちの時間を削減",
+    title: "リサーチ時間を90%削減",
     description:
       "自然文の指示から数十秒で候補→連絡手段→アウトリーチ下書きまで生成。広告会議に間に合わせるためのリサーチ時間をほぼゼロに。",
     icon: "ic-speed.svg",
@@ -54,9 +54,6 @@ export const Strengths = () => {
           <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
             <span className="text-brand">CVR改善</span>につながる3つの体験価値
           </h2>
-          <p className="max-w-[56ch] text-sm text-slate-600">
-            広告から流入した直後のユーザーが&ldquo;これなら成果が出る&rdquo;と確信できる情報を先回りで提示し、無料トライアルへのハードルを下げます。
-          </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
           {items.map((item, idx) => (

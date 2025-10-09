@@ -15,7 +15,7 @@ export const FloatingCta = () => {
         className="btn-primary w-full shadow-xl shadow-emerald-500/20 transition-all hover:shadow-2xl hover:shadow-emerald-500/30 hover:scale-[1.02]"
         onClick={handleClick}
       >
-        1週間無料トライアルを始める
+        1ヶ月無料トライアルを始める
       </Link>
     </div>
   );

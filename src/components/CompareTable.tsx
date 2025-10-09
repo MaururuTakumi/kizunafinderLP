@@ -53,7 +53,7 @@ const FLOW_COPY = {
 const CLOSING = {
   heading: "売れる未来に、最短で届く。",
   sub: "見つける・声をかける・届けるをAIが自動化。社内で自走する仕組みで、欲しい顧客に確実に近づく。",
-  ctaPrimary: { label: "1週間無料トライアルを始める", href: "#contact" },
+  ctaPrimary: { label: "1ヶ月無料トライアルを始める", href: "#contact" },
 };
 
 export function CompareTable() {

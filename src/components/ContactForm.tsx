@@ -131,7 +131,7 @@ export const ContactForm = () => {
         <div className="space-y-2 text-center">
           <h2 className="text-3xl font-bold text-ink">β版への参加・お問い合わせ</h2>
           <p className="text-sm text-ink/70">
-            1週間の無料トライアルを希望される場合は、下記フォームをご利用ください。
+            1ヶ月の無料トライアルを希望される場合は、下記フォームをご利用ください。
           </p>
         </div>
         <form className="space-y-5" onSubmit={handleSubmit}>

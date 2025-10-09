@@ -21,7 +21,7 @@ export const BetaSection = () => {
             参加企業を限定募集
           </h2>
           <p className="text-base text-white/90 leading-relaxed">
-            1週間の無料トライアルを通じて、最適なワークフローの定着まで私たちが伴走します。
+            1ヶ月の無料トライアルを通じて、最適なワークフローの定着まで私たちが伴走します。
           </p>
         </div>
         <div className="flex-1">
@@ -41,7 +41,7 @@ export const BetaSection = () => {
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full">
           <div className="relative group flex-shrink-0">
             <Link href="/#contact" className="btn-primary bg-white text-brand hover:bg-white/95 shadow-xl hover:shadow-2xl transition-all inline-flex items-center gap-2 group-hover:gap-3 text-base font-bold px-8 py-4">
-              1週間無料トライアルを始める
+              1ヶ月無料トライアルを始める
               <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

@@ -109,9 +109,6 @@ export const Steps = () => {
           <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
             <span className="text-brand">CVR改善</span>までを<span className="font-black">3ステップ</span>で完結
           </h2>
-          <p className="max-w-[60ch] text-slate-600">
-            広告から流入した瞬間に「このツールで次の施策が回せる」と確信してもらうために、<span className="font-semibold text-brand">課題整理→勝ち筋共有→実行のタスク化</span>までを一本化しました。
-          </p>
           {/* 視線誘導：下へのフロー */}
           <div className="mt-2 flex flex-col items-center gap-1">
             <svg className="w-6 h-6 text-brand/40 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">

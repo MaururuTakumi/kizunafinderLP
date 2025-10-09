@@ -56,15 +56,6 @@ export const Header = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center">
-          <Link
-            href="/#contact"
-            className="btn-primary text-nav-cta"
-            onClick={handleCta("header")}
-          >
-            1週間無料トライアルを始める
-          </Link>
-        </div>
       </div>
     </header>
   );
