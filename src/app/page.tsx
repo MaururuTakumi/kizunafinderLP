@@ -49,7 +49,6 @@ export default function Home() {
         <Hero />
         <Strengths />
         <Steps />
-        <CompareTable />
         <NowNext />
         <Templates />
         <BetaSection />
